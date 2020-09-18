@@ -11,7 +11,7 @@ game_result = Game_result.new
 
 start_message
 
-while continue
+while game_result.continue
   deck = Deck.new
   myplayer = Myplayer.new(deck.card.delete_at(0), "あなた")
   pcplayer = Pcplayer.new(deck.card.delete_at(0), "相手")

@@ -216,11 +216,11 @@ class Myplayer < Player
       puts "#{self.name}の成績は#{game_result.myplayer}勝#{game_result.pcplayer}敗#{game_result.compensating}分です。"
       question_continue_message
       input = gets.chomp.to_i
-      if input == BOY
+      if input == 1
         restart_message
         break
-      elsif input == SOLDIER
-        continue = false
+      elsif input == 2
+        game_result.continue = false
         break
       else
         one_two_message
